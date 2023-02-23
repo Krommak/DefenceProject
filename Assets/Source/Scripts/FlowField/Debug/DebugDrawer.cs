@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class DebugDrawer : MonoBehaviour
@@ -23,9 +24,10 @@ public class DebugDrawer : MonoBehaviour
             {
                 for (int x = 0; x < xSize; x++)
                 {
-                    //Gizmos.color = _nodes[x, z].isAvailable ? Color.white : Color.black;
-                    //if (_nodes[x, z].WeightForPlayer > 0)
-                    //    Gizmos.color = new Color((float)_nodes[x, z].WeightForPlayer / (float)zSize, 1f - (float)playField[x, z].WeightForPlayer / (float)zSize, 1f - (float)playField[x, z].WeightForPlayer / (float)zSize);
+                    Gizmos.color = Color.white;
+                    if (_nodes[x, z].Weight > 0)
+                        Gizmos.color = new Color((float)_nodes[x, z].Weight / (float)zSize, 1f - (float)_nodes[x, z].Weight / (float)zSize, 1f - (float)_nodes[x, z].Weight / (float)zSize);
+
                     Gizmos.DrawCube(_nodes[x, z].Position, new Vector3(9f, 1f, 9f));
                 }
             }
