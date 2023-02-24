@@ -8,7 +8,7 @@ public class FieldInitSystem : IEcsInitSystem
     
     public void Init()
     {
-        _runtimeData.FieldNodes = new Node[_staticData.FieldSize.x, _staticData.FieldSize.y];
+        _runtimeData.StandartField = new Node[_staticData.FieldSize.x, _staticData.FieldSize.y];
 
         var offset = _staticData.NodeOffset;
         var PosX = _staticData.StartPoint.x + offset;
@@ -19,7 +19,7 @@ public class FieldInitSystem : IEcsInitSystem
         {
             for (int x = 0; x < _staticData.FieldSize.x; x++)
             {
-                ref var node = ref _runtimeData.FieldNodes[x, z];
+                ref var node = ref _runtimeData.StandartField[x, z];
 
                 node.Position = new Vector3(PosX, PosY, PosZ);
 

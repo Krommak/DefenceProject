@@ -36,6 +36,7 @@ public class GameStartup : MonoBehaviour
     void CreateInitSystems()
     {
         _initSystems = new EcsSystems(_world)
+            .Add(new InitPlayerSystem())
             .Add(new FieldInitSystem())
             .Add(new CalculateWeight());
         _initSystems.ConvertScene();

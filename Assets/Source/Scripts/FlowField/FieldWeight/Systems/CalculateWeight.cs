@@ -7,20 +7,22 @@ public class CalculateWeight : IEcsInitSystem
     EcsFilter<DebugDrawerComponent> _debug = null;
     StaticData _staticData;
     RuntimeData _runtimeData;
-    EcsFilter<WeightComponent> _weights = null;
+    EcsFilter<WeightComponent, PlayerComponent> _weights = null;
+    int actualPlayer = 0;
+
     public void Init()
     {
         foreach (var item in _weights)
         {
             ref var weight = ref _weights.Get1(item);
+            actualPlayer = _weights.Get2(item).PlayerNum;
             Calculate(weight);
-        }
+            foreach (var deb in _debug)
+            {
+                ref var debug = ref _debug.Get1(deb);
 
-        foreach (var item in _debug)
-        {
-            ref var debug = ref _debug.Get1(item);
-
-            debug.Drawer.SetNodes(_runtimeData.FieldNodes);
+                debug.Drawer.SetNodes(_runtimeData.GetFieldsForPlayer(0));
+            }
         }
     }
 
@@ -33,17 +35,18 @@ public class CalculateWeight : IEcsInitSystem
 
     void SetWeight(Vector2Int center, Vector2Int weightAndOffset)
     {
-        var xSize = _runtimeData.FieldNodes.GetLength(0) - 1;
-        var zSize = _runtimeData.FieldNodes.GetLength(1) - 1;
+        var xSize = _runtimeData.GetFieldSize.x;
+        var zSize = _runtimeData.GetFieldSize.y;
         var xStart = Mathf.Clamp(center.x - weightAndOffset.y, 0, xSize);
         var zStart = Mathf.Clamp(center.y - weightAndOffset.y, 0, zSize);
         var xFinish = Mathf.Clamp(center.x + weightAndOffset.y, 0, xSize);
         var zFinish = Mathf.Clamp(center.y + weightAndOffset.y, 0, zSize);
+        var nodes = _runtimeData.GetFieldsForPlayer(actualPlayer);
         for (int x = xStart; x <= xFinish; x++)
         {
             for (int z = zStart; z <= zFinish; z++)
             {
-                ref var node = ref _runtimeData.FieldNodes[x, z];
+                ref var node = ref nodes[x, z];
                 var xMax = x >= center.x ? x : center.x;
                 var xMin = x < center.x ? x : center.x;
                 var zMax = z >= center.y ? z : center.y;
@@ -57,8 +60,8 @@ public class CalculateWeight : IEcsInitSystem
 
     Vector2Int GetCenter(Vector3 pos)
     {
-        var xSize = _runtimeData.FieldNodes.GetLength(0);
-        var zSize = _runtimeData.FieldNodes.GetLength(1);
+        var xSize = _runtimeData.GetFieldSize.x;
+        var zSize = _runtimeData.GetFieldSize.y;
         var centerPosition = new Vector2(
             (float)Math.Round(pos.x, 1, MidpointRounding.ToEven),
             (float)Math.Round(pos.z, 1, MidpointRounding.ToEven));
