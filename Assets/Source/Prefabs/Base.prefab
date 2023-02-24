@@ -159,8 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     Transform: {fileID: 1129568376968798591}
-    IncreaseWeightAndOffset: {x: 8, y: 10}
-    DecreaseWeightAndOffset: {x: -15, y: 0}
+    IncreaseWeightAndOffset: {x: 1000, y: 100}
+    DecreaseWeightAndOffset: {x: -1000, y: 0}
 --- !u!114 &1129568376968798588
 MonoBehaviour:
   m_ObjectHideFlags: 0

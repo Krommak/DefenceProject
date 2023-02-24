@@ -915,6 +915,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Base (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
+      propertyPath: value.DecreaseWeightAndOffset.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
+      propertyPath: value.DecreaseWeightAndOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
+      propertyPath: value.IncreaseWeightAndOffset.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
+      propertyPath: value.IncreaseWeightAndOffset.y
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1129568376968798591, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}
       propertyPath: m_RootOrder
@@ -923,7 +943,7 @@ PrefabInstance:
     - target: {fileID: 1129568376968798591, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 94.76218
+      value: 95.5
       objectReference: {fileID: 0}
     - target: {fileID: 1129568376968798591, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}
@@ -933,7 +953,7 @@ PrefabInstance:
     - target: {fileID: 1129568376968798591, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.082127
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 1129568376968798591, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}
@@ -1125,6 +1145,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
+      propertyPath: value.DecreaseWeightAndOffset.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
+      propertyPath: value.DecreaseWeightAndOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
+      propertyPath: value.IncreaseWeightAndOffset.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
+      propertyPath: value.IncreaseWeightAndOffset.y
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1129568376968798591, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}

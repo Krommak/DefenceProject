@@ -52,7 +52,7 @@ public class CalculateWeight : IEcsInitSystem
                 var zMax = z >= center.y ? z : center.y;
                 var zMin = z < center.y ? z : center.y;
                 var remoteness = Math.Abs(xMax - xMin + zMax - zMin);
-                var influence = weightAndOffset.x / (remoteness == 0 ? 1 : remoteness);
+                float influence = weightAndOffset.x / (remoteness == 0 ? 1 : remoteness);
                 node.Weight += influence;
             }
         }

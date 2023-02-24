@@ -3,5 +3,6 @@ using UnityEngine;
 public struct Node
 {
     internal Vector3 Position;
-    internal int Weight;
+    internal float Weight;
+    internal Vector3 Direction;
 }
