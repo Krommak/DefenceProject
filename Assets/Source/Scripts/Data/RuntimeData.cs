@@ -1,14 +1,25 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class RuntimeData
 {
-    internal Node[,] StandartField;
-    Dictionary<int, Node[,]> fieldsByPlayerNum = new Dictionary<int, Node[,]>();
+    internal PlayField PlayField;
+
+    internal Node[,] StandartField => PlayField.StandartField;
+}
+
+public class PlayField
+{
+    internal Node[,] StandartField { get; set; }
+    internal Dictionary<int, Node[,]> fieldsByPlayerNum = new Dictionary<int, Node[,]>();
+
+    internal PlayField(Vector2Int size)
+    {
+        StandartField = new Node[size.x, size.y];
+    }
 
     internal Node[,] GetFieldsForPlayer(int playerIndex)
     {

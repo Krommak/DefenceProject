@@ -8,7 +8,7 @@ public class FieldInitSystem : IEcsInitSystem
     
     public void Init()
     {
-        _runtimeData.StandartField = new Node[_staticData.FieldSize.x, _staticData.FieldSize.y];
+        _runtimeData.PlayField = new PlayField(_staticData.FieldSize);
 
         var offset = _staticData.NodeOffset;
         var PosX = _staticData.StartPoint.x + offset;

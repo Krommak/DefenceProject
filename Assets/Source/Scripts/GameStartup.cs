@@ -1,6 +1,5 @@
 using Leopotam.Ecs;
 using UnityEngine;
-using UnityEngine.AddressableAssets.Initialization;
 using Voody.UniLeo;
 
 public class GameStartup : MonoBehaviour

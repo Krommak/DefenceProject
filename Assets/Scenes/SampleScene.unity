@@ -918,7 +918,7 @@ PrefabInstance:
     - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}
       propertyPath: value.DecreaseWeightAndOffset.x
-      value: -100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}
@@ -992,6 +992,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f861fd75cb247546a4a2fb32f33b160, type: 3}
+--- !u!4 &1595932761 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1129568376968798591, guid: 5f861fd75cb247546a4a2fb32f33b160,
+    type: 3}
+  m_PrefabInstance: {fileID: 1129568377518306039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1971465759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,8 +1154,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}
+      propertyPath: value.Transform
+      value: 
+      objectReference: {fileID: 1595932761}
+    - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
+        type: 3}
       propertyPath: value.DecreaseWeightAndOffset.x
-      value: -100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1129568376968798590, guid: 5f861fd75cb247546a4a2fb32f33b160,
         type: 3}

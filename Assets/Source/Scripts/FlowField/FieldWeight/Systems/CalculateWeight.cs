@@ -21,7 +21,7 @@ public class CalculateWeight : IEcsInitSystem
             {
                 ref var debug = ref _debug.Get1(deb);
 
-                debug.Drawer.SetNodes(_runtimeData.GetFieldsForPlayer(0));
+                debug.Drawer.SetNodes(_runtimeData.PlayField.GetFieldsForPlayer(0));
             }
         }
     }
@@ -35,13 +35,13 @@ public class CalculateWeight : IEcsInitSystem
 
     void SetWeight(Vector2Int center, Vector2Int weightAndOffset)
     {
-        var xSize = _runtimeData.GetFieldSize.x;
-        var zSize = _runtimeData.GetFieldSize.y;
+        var xSize = _runtimeData.PlayField.GetFieldSize.x;
+        var zSize = _runtimeData.PlayField.GetFieldSize.y;
         var xStart = Mathf.Clamp(center.x - weightAndOffset.y, 0, xSize);
         var zStart = Mathf.Clamp(center.y - weightAndOffset.y, 0, zSize);
         var xFinish = Mathf.Clamp(center.x + weightAndOffset.y, 0, xSize);
         var zFinish = Mathf.Clamp(center.y + weightAndOffset.y, 0, zSize);
-        var nodes = _runtimeData.GetFieldsForPlayer(actualPlayer);
+        var nodes = _runtimeData.PlayField.GetFieldsForPlayer(actualPlayer);
         for (int x = xStart; x <= xFinish; x++)
         {
             for (int z = zStart; z <= zFinish; z++)
@@ -60,8 +60,8 @@ public class CalculateWeight : IEcsInitSystem
 
     Vector2Int GetCenter(Vector3 pos)
     {
-        var xSize = _runtimeData.GetFieldSize.x;
-        var zSize = _runtimeData.GetFieldSize.y;
+        var xSize = _runtimeData.PlayField.GetFieldSize.x;
+        var zSize = _runtimeData.PlayField.GetFieldSize.y;
         var centerPosition = new Vector2(
             (float)Math.Round(pos.x, 1, MidpointRounding.ToEven),
             (float)Math.Round(pos.z, 1, MidpointRounding.ToEven));
