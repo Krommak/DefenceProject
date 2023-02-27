@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb71abf7814d6b4a8c236baeb047a5c, type: 3}
+  m_Name: HumanSpearer
+  m_EditorClassIdentifier: 
+  animMaterials:
+  - type: 0
+    material: {fileID: 2100000, guid: 6b54ca6286b7945448061fe792c927c2, type: 2}
+  - type: 1
+    material: {fileID: 2100000, guid: 72626186674397b4b8be86fe9b612476, type: 2}
+  - type: 2
+    material: {fileID: 2100000, guid: 23457d07ef998a84f84bbceda5bfb21d, type: 2}
+  - type: 3
+    material: {fileID: 2100000, guid: 2bae4f23002fd5147a1b2235071cffe6, type: 2}
+  - type: 4
+    material: {fileID: 2100000, guid: e0d619fb8b0fab443b0a592460766351, type: 2}
+  - type: 5
+    material: {fileID: 2100000, guid: 7c1c79ac8a84b3b4481735a207c879e0, type: 2}
+  - type: 6
+    material: {fileID: 2100000, guid: af348f13d2a2b3c4abdf77a525bfcd1d, type: 2}
+  - type: 7
+    material: {fileID: 2100000, guid: d812405aa2f73db4fa8da539f0cae855, type: 2}
+  - type: 8
+    material: {fileID: 2100000, guid: c24766d333be28d4bb915118eacb38d1, type: 2}

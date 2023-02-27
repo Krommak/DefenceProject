@@ -44,7 +44,8 @@ public class GameStartup : MonoBehaviour
 
     void CreateUpdateSystems()
     {
-        _updateSystems = new EcsSystems(_world);
+        _updateSystems = new EcsSystems(_world)
+            .Add(new UnitAnimationsSystem());
         _updateSystems.ConvertScene();
     }
 
